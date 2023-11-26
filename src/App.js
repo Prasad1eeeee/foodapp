@@ -3,17 +3,31 @@ import './App.css';
 
 //import Home from './screens/Home';
 import Homepage from './screens/Homepage';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
 
+} from "react-router-dom";
+import Login from './screens/Login';
+import '../node_modules/bootstrap-dark-5/dist/css/bootstrap-dark.min.css';
+import '../node_modules/bootstrap/dist/js/bootstrap.bundle';
+import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
 function App() {
   return (
-    <>
+    <Router>
 
-    <div><Homepage></Homepage></div>
-    
-    
-    </>
-   
-  
+      <div>
+        <Routes>
+          <Route exact path='/' element={<Homepage></Homepage>}></Route>
+          <Route exact path='/login' element={<Login></Login>}></Route>
+        </Routes>
+      </div>
+
+
+    </Router>
+
+
   );
 }
 
