@@ -1,12 +1,12 @@
 import React from 'react';
 
-export default function Card() {
+export default function Card2() {
     return (
         <div>
             <div className="card" style={{ width: '18rem', maxHeight: '360px' }}>
-                <img src="https://source.unsplash.com/random/900x700/?burger" className="card-img-top" alt="..." />
+                <img src="https://source.unsplash.com/random/900x700/? BBQ" className="card-img-top" alt="..." />
                 <div className="card-body">
-                    <h5 className="card-title fst-italic">Burger</h5>
+                    <h5 className="card-title fst-italic">Rose Cheken</h5>
                     <p className="card-text fst-italic" >
                         enjoy meal with us
                     </p>
