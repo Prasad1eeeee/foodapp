@@ -1,9 +1,57 @@
+// import React from 'react';
+
+// export default function Carousel() {
+//     return (
+//         <div>
+//             <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel" style={{ objectFit: "contain !important" }}>
+//                 <div className="carousel-indicators" id='carousel'>
+//                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+//                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+//                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+//                 </div>
+//                 <div className="carousel-inner" style={{ zIndex: "10" }}>
+//                     <br></br>
+//                     <div className="d-flex">
+//                         <input
+//                             className="form-control me-2"
+//                             type="search"
+//                             placeholder="Search"
+//                             aria-label="Search"
+//                             style={{ width: '150px' }}
+//                             value={search}
+//                             onChange={(e) => setSearch(e.target.value)}
+//                         />
+
+//                         {/* <button className="btn btn-outline-success text-white bg-success" type="submit">Search</button> */}
+//                     </div>
+//                     <div className="carousel-item active">
+//                         <img src="https://source.unsplash.com/random/900x700/?burger" className="d-block w-100" style={{ filter: "brightness(30%)" }} alt="..." />
+//                     </div>
+//                     <div className="carousel-item">
+//                         <img src="https://source.unsplash.com/random/900x700/?pizza" className="d-block w-100" style={{ filter: "brightness(30%)" }} alt="..." />
+//                     </div>
+//                     <div className="carousel-item">
+//                         <img src="https://source.unsplash.com/random/900x700/?BBQ" className="d-block w-100" style={{ filter: "brightness(30%)" }} alt="..." />
+//                     </div>
+//                 </div>
+//                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+//                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+//                     <span className="visually-hidden">Previous</span>
+//                 </button>
+//                 <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+//                     <span className="carousel-control-next-icon" aria-hidden="true"></span>
+//                     <span className="visually-hidden">Next</span>
+//                 </button>
+//             </div>
+//         </div>
+//     );
+// }
 import React from 'react';
 
-export default function Carousel() {
+export default function Carousel({ search, setSearch }) {
     return (
         <div>
-            <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel" style={{objectFit:"contain !important"}}>
+            <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel" style={{ objectFit: "contain !important" }}>
                 <div className="carousel-indicators" id='carousel'>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -11,10 +59,17 @@ export default function Carousel() {
                 </div>
                 <div className="carousel-inner" style={{ zIndex: "10" }}>
                     <br></br>
-                    <form className="d-flex">
-                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" style={{ width: '150px' }} />
-                        <button className="btn btn-outline-success text-white bg-success" type="submit">Search</button>
-                    </form>
+                    <div className="d-flex">
+                        <input
+                            className="form-control me-2"
+                            type="search"
+                            placeholder="Search"
+                            aria-label="Search"
+                            style={{ width: '150px' }}
+                            value={search}
+                            onChange={(e) => setSearch(e.target.value)}
+                        />
+                    </div>
                     <div className="carousel-item active">
                         <img src="https://source.unsplash.com/random/900x700/?burger" className="d-block w-100" style={{ filter: "brightness(30%)" }} alt="..." />
                     </div>

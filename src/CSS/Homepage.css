@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+}
+
+.category-container {
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.card-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10px;
+    margin-right: 10px;
+    justify-content: space-between;
+}
+
+.card-column {
+    width: 30%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
