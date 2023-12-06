@@ -29,6 +29,9 @@ export default function Login() {
             alert("enter valid details");
         }
         if (json.success) {
+            localStorage.setItem('authToken', json.token);
+            localStorage.setItem('userEmail', credentials.email);
+            
             nanigate('/');
         }
 
